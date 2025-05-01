@@ -1,0 +1,25 @@
+// Information System Flow
+digraph {
+	node [color=lightblue fontname=Arial shape=box style=filled]
+	A [label="1. User fills form / enters data
+(user input interface)"]
+	B [label="2. Raw data captured by the system
+(input processing)"]
+	C [label="3. System checks: Is it TPS, MIS, etc?
+(categorization module)"]
+	D [label="4. Saves into correct category
+(TPS, MIS, HRIS...)"]
+	E [label="5. Summarizes the stored data
+(report generator)"]
+	F [label="6. Report shown in table format
+(output display)"]
+	node [color=lightgoldenrod1]
+	V [label="Validation Check:
+Check fields, types, missing values"]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	V -> B
+}
